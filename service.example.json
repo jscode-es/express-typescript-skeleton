@@ -1,0 +1,31 @@
+{
+    "www": {
+        "start": true,
+        "protocol": "h2",
+        "secure": true,
+        "method": [
+            "POST",
+            "GET",
+            "PUT",
+            "DELETE",
+            "OPTIONS"
+        ],
+        "dev_mode": {
+            "start": false,
+            "protocol": "h1",
+            "port": 3000,
+            "secure": false,
+            "method": [
+                "GET"
+            ]
+        }
+    },
+    "api": {
+        "start": true,
+        "protocol": "h2",
+        "secure": true,
+        "method": [
+            "POST"
+        ]
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "error": {
+        "unauthorized": "No autorizado",
+        "accepted": "Acceptado",
+        "forbidden": "Prohibido",
+        "not_found": "Datos no encontrados"
+    }
+}

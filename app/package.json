@@ -1,0 +1,43 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build:server",
+    "build:server": "cd server && npm run start",
+    "build:client": "cd client && npm run start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json",
+    "env": {
+      "jest": true,
+      "cypress/globals": true
+    },
+    "plugins": [
+      "cypress"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "27.0.3",
+    "eslint-plugin-cypress": "2.12.1",
+    "standard": "16.0.4",
+    "ts-jest": "27.0.7",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,92 @@
+{
+  "name": "express-typescript-skeleton",
+  "version": "1.0.0",
+  "description": "Basic structure of an express js project",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "start": "cross-env NODE_ENV=development nodemon",
+    "service": "cd dist/server && node start.js",
+    "build": "npm run build:clean --silent && npm run build:tsc --silent && npm run copy:i18n --silent && npm run copy:settingService --silent && npm run copy:env --silent && npm run service",
+    "build:tsc": "tsc --project ./app/server/tsconfig.json",
+    "copy:i18n": "copyfiles -u 1 app/server/i18n/**/*.json dist",
+    "copy:env": "copyfiles -u 1 app/server/.env.* dist",
+    "copy:settingService": "copyfiles -u 1 app/server/service/**/*.json dist",
+    "build:clean": "del-cli -f dist/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JSCode-es/express-typescript-skeleton.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JSCode-es/express-typescript-skeleton/issues"
+  },
+  "homepage": "https://github.com/JSCode-es/express-typescript-skeleton#readme",
+  "nodemonConfig": {
+    "ignore": [
+      "dist/*"
+    ],
+    "ext": "pug,ts,json",
+    "exec": "npm run build --silent",
+    "verbose": false,
+    "legacyWatch": true,
+    "delay": 0
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "inversify": "^6.0.1",
+    "atob": "^2.1.2",
+    "bcryptjs": "^2.4.3",
+    "btoa": "^1.2.1",
+    "chalk": "^5.0.0",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express-device": "^0.4.2",
+    "express-fileupload": "^1.2.1",
+    "flv.js": "^1.6.2",
+    "http2-express-bridge": "^1.0.7",
+    "is-ip": "^3.1.0",
+    "js-cookie": "^3.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysqldump": "^3.2.0",
+    "node-fetch": "^3.1.0",
+    "node-media-server": "^2.3.8",
+    "nodemailer": "^6.7.2",
+    "promise-mysql": "^5.0.4",
+    "pug": "^3.0.2",
+    "socket.io": "^4.4.0",
+    "stripe": "^8.191.0",
+    "uuid": "^8.3.2",
+    "joi": "^17.4.2",
+    "rimraf": "^3.0.2",
+    "fs-extra": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/rimraf": "^3.0.2",
+    "@types/atob": "^2.1.2",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/btoa": "^1.2.3",
+    "@types/compression": "^1.7.2",
+    "@types/cookie-parser": "^1.4.2",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/express-fileupload": "^1.2.0",
+    "@types/express-session": "^1.17.4",
+    "@types/fs-extra": "^9.0.13",
+    "@types/jsonwebtoken": "^8.5.6",
+    "@types/nodemailer": "^6.4.4",
+    "@types/pug": "^2.0.5",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "cross-env": "^7.0.3",
+    "del-cli": "^4.0.1",
+    "copyfiles": "^2.4.1"
+  }
+}

@@ -1,0 +1,51 @@
+{
+	"extends": "../tsconfig.json",
+	"include": [
+		"./**/*"
+	],
+	"exclude": [
+		"test"
+	],
+	"compilerOptions": {
+		"target": "ES2020",
+		"module": "commonjs",
+		"lib": [
+			"ES2020"
+		],
+		"experimentalDecorators": true,
+		"allowJs": false,
+		"checkJs": false,
+		"declarationMap": false,
+		"sourceMap": false,
+		"outDir": "../../dist/server",
+		"removeComments": true,
+		"isolatedModules": false,
+		"strict": true,
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
+		"strictPropertyInitialization": true,
+		"noImplicitThis": true,
+		"alwaysStrict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": false,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUncheckedIndexedAccess": true,
+		"noImplicitOverride": false,
+		"noPropertyAccessFromIndexSignature": false,
+		"resolveJsonModule": true,
+		"moduleResolution": "node",
+		"baseUrl": "../../",
+		"typeRoots": [
+			"node_modules/@types"
+		],
+		"types": [
+			"node"
+		],
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true
+	}
+}

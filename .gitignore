@@ -1,0 +1,39 @@
+# Dependency directories
+node_modules/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Coverage directory used by tools like istanbul
+coverage
+*.lcov
+
+# dotenv environment variables file
+.env
+.env.test
+.env.production
+.env.development
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# Proyect
+app/server/bin
+app/server/certificate/production
+dist
+*.log
